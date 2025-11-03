@@ -6,8 +6,7 @@ This repository contains LAMMPS simulation inputs, Python analysis scripts, and 
 
 ---
 # Directory Structure
-
-CoFeNi_SFE_Project/
+```bash CoFeNi_SFE_Project/
 ├── input/                     # LAMMPS input scripts
 │   ├── in.fcc.lmp
 │   ├── in.hcp.lmp
@@ -48,21 +47,22 @@ CoFeNi_SFE_Project/
 │   ├── isf_vs_composition_350K.png
 │   └── isf_vs_composition_550K.png
 │
-├── ternary/                   # Contour plots for γISF, γESF, γTwin
-│   ├── ternary_γISF_100K_contour_full.png
-│   ├── ternary_γISF_350K_contour_full.png
-│   ├── ternary_γISF_550K_contour_full.png
-│   ├── ternary_γESF_100K_contour_full.png
-│   ├── ternary_γESF_350K_contour_full.png
-│   ├── ternary_γESF_550K_contour_full.png
-│   ├── ternary_γTwin_100K_contour_full.png
-│   ├── ternary_γTwin_350K_contour_full.png
-│   └── ternary_γTwin_550K_contour_full.png
+├── ternary/                   # Contour plots for gamma_ISF, gamma_ESF, gamma_Twin
+│   ├── ternary_gamma_ISF_100K_contour_full.png
+│   ├── ternary_gamma_ISF_350K_contour_full.png
+│   ├── ternary_gamma_ISF_550K_contour_full.png
+│   ├── ternary_gamma_ESF_100K_contour_full.png
+│   ├── ternary_gamma_ESF_350K_contour_full.png
+│   ├── ternary_gamma_ESF_550K_contour_full.png
+│   ├── ternary_gamma_Twin_100K_contour_full.png
+│   ├── ternary_gamma_Twin_350K_contour_full.png
+│   └── ternary_gamma_Twin_550K_contour_full.png
 │
 ├── main.tex                   # LaTeX report source
 └── README.md                  # This file (project documentation)
 
 
+```
 ---
 
 ## 🧪 Objective
