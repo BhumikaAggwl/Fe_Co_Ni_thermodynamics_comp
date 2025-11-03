@@ -1,0 +1,36 @@
+LAMMPS (22 Jul 2025 - Update 1)
+# ---------- DHCP Co–Fe–Ni (non-conventional orientation + energy extraction) ----------
+shell mkdir -p ${OUTDIR}
+shell mkdir -p /Users/Lenovo/projects/comp2/work/results/dhcp_Co1.00_Fe0.00_Ni0.00_550K
+
+units          metal
+atom_style     atomic
+boundary       p p p
+
+# --- Non-conventional orientation logging (for post-analysis clarity only) ---
+# --- Non-conventional orthogonal orientation for DHCP ---
+variable orient_xx equal "1"
+variable orient_xy equal "1"
+variable orient_xz equal "0"
+variable orient_yx equal "-1"
+variable orient_yy equal "1"
+variable orient_yz equal "0"
+variable orient_zx equal "0"
+variable orient_zy equal "0"
+variable orient_zz equal "1"
+
+
+read_data      ${DATA}
+read_data      /Users/Lenovo/projects/comp2/work/data/dhcp_Co1.00_Fe0.00_Ni0.00.data
+Reading data file ...
+  triclinic box = (0 0 0) to (10 8.660254 32.66) with tilt (-5 0 0)
+WARNING: Triclinic box skew is large. LAMMPS will run inefficiently. (src/domain.cpp:221)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  128 atoms
+  read_data CPU = 0.001 seconds
+
+pair_style     eam/alloy
+pair_coeff     * * ../potentials/FeNiCrCoAl-heaweight.setfl Co Fe Ni
+ERROR: Number of element to type mappings does not match number of atom types (src/MANYBODY/pair_eam_alloy.cpp:50)
+Last input line: pair_coeff * * ../potentials/FeNiCrCoAl-heaweight.setfl Co Fe Ni
