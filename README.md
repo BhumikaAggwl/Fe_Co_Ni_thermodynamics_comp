@@ -5,51 +5,50 @@
 This repository contains LAMMPS simulation inputs, Python analysis scripts, and visualization outputs for evaluating stacking fault energies (γISF, γESF, γTwin) in Co–Fe–Ni alloys at different temperatures.
 
 ---
-
-## 📁 Directory Structure
+# Directory Structure
 
 CoFeNi_SFE_Project/
-├── input/                       # LAMMPS input scripts
+├── input/                     # LAMMPS input scripts
 │   ├── in.fcc.lmp
 │   ├── in.hcp.lmp
 │   └── in.dhcp.lmp
 │
-├── work/                        # Working directory for simulation data
-│   ├── data/                    # Generated .data and .cif files (21 compositions)
-│   ├── logs/                    # LAMMPS log files
-│   └── results/                 # Final simulation outputs per structure
+├── work/                      # Working directory for simulation data
+│   ├── data/                  # Generated .data and .cif files (21 compositions)
+│   ├── logs/                  # LAMMPS log files
+│   ├── results/               # Final simulation outputs per structure
+│   └── potentials/            # Potential files
+│       └── FeNiCrCoAl-heaweight.setfl
 │
-├── potentials/                  # Potential files
-│   └── FeNiCrCoAl-heaweight.setfl
+├── scripts/                   # Simulation + plotting scripts
+│   ├── generate.py            # Structure generation
+│   ├── analyse_sfe.py         # SFE analysis from logs
+│   ├── plt_ter_2.py           # Ternary contour plots
+│   ├── plt_pe.py              # Cohesive energy plots
+│   └── plt_benchmark.py       # Benchmark plot vs literature
 │
-├── scripts/                     # Simulation + plotting scripts
-│   ├── generate.py              # Structure generation
-│   ├── analyse_sfe.py           # SFE analysis from logs
-│   ├── plt_ter_2.py             # Ternary contour plots
-│   ├── plt_pe.py                # Cohesive energy plots
-│   ├── plt_benchmark.py         # Benchmark plot vs literature
-│   ├── run_fcc.sh               # Shell script: FCC jobs
-│   ├── run_hcp.sh               # Shell script: HCP jobs
-│   ├── run_dhcp.sh              # Shell script: DHCP jobs
-│   └── run_all.sh               # Master script to run all simulations
+├── run_fcc.sh                 # Shell script: FCC jobs
+├── run_hcp.sh                 # Shell script: HCP jobs
+├── run_dhcp.sh                # Shell script: DHCP jobs
+├── run_all.sh                 # Master script to run all simulations
 │
-├── lattice/                     # Lattice parameter plots
+├── lattice/                   # Lattice parameter plots
 │   ├── lattice_FCC.png
 │   ├── lattice_HCP.png
 │   └── lattice_DHCP.png
 │
-├── pe/                          # Cohesive energy plots
-│   └── pe_by_structure_better_scaled.png
+├── pe/                        # Cohesive energy plots
+│   ├── pe_by_structure_better_scaled.png
+│   └── benchmark/
+│       ├── vISF_benchmarking_vs_literature
+│       └── benchmark_logscale.png
 │
-├── benchmark/                   # γISF benchmarking vs literature
-│   └── benchmark_logscale.png
-│
-├── plots_by_composition/        # ISF vs temperature and composition
+├── plots_by_composition/      # ISF vs temperature and composition
 │   ├── isf_vs_composition_100K.png
 │   ├── isf_vs_composition_350K.png
 │   └── isf_vs_composition_550K.png
 │
-├── ternary/                     # Contour plots for γISF, γESF, γTwin
+├── ternary/                   # Contour plots for γISF, γESF, γTwin
 │   ├── ternary_γISF_100K_contour_full.png
 │   ├── ternary_γISF_350K_contour_full.png
 │   ├── ternary_γISF_550K_contour_full.png
@@ -60,8 +59,8 @@ CoFeNi_SFE_Project/
 │   ├── ternary_γTwin_350K_contour_full.png
 │   └── ternary_γTwin_550K_contour_full.png
 │
-├── main.tex                     # LaTeX report source
-└── README.md                    # This file (project documentation)
+├── main.tex                   # LaTeX report source
+└── README.md                  # This file (project documentation)
 
 
 ---
